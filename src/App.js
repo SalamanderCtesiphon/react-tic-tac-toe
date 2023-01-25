@@ -1,5 +1,16 @@
 function Square({ vlaue }) {
-  return <button className="square">{vlaue}</button>;
+  function handleClick() {
+    console.log('clicked!');
+  }
+
+  return (
+    <button 
+      className="square"
+      onClick={handleClick}
+    >
+      {vlaue}
+    </button>
+  )   
 }
 
 export default function Board() {
