@@ -1,11 +1,4 @@
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-     hi
-    </div>
-  );
+export default function Square() {
+  return <button className="square">X</button>;
 }
 
-export default App;
