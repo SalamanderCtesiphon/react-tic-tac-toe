@@ -1,6 +1,10 @@
-function Square({ vlaue }) {
+import { useState } from "react";
+
+function Square({  }) {
+  const [value, setValue] = useState(null);
+
   function handleClick() {
-    console.log('clicked!');
+    setValue('X');
   }
 
   return (
@@ -8,7 +12,7 @@ function Square({ vlaue }) {
       className="square"
       onClick={handleClick}
     >
-      {vlaue}
+      {value}
     </button>
   )   
 }
@@ -17,19 +21,19 @@ export default function Board() {
   return (
     <>
     <div className="board-row">
-      <Square vlaue={1} />
-      <Square vlaue={2} />
-      <Square vlaue={3} />
+      <Square />
+      <Square />
+      <Square />
     </div>
     <div className="board-row">
-      <Square vlaue={4} />
-      <Square vlaue={5} />
-      <Square vlaue={6} />
+      <Square />
+      <Square />
+      <Square />
     </div>
     <div className="board-row">
-      <Square vlaue={7} />
-      <Square vlaue={8} />
-      <Square vlaue={9} />
+      <Square />
+      <Square />
+      <Square />
     </div>
   </>
   );
